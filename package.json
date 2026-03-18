@@ -1,0 +1,12 @@
+{
+  "name": "office-landing-clean",
+  "version": "1.0.0",
+  "description": "Clean office landing for Railway deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

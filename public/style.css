@@ -1,0 +1,394 @@
+:root {
+  --bg: #f3f5f9;
+  --card: #ffffff;
+  --line: #d9dfeb;
+  --text: #111a33;
+  --muted: #75809a;
+  --soft: #f0f3f8;
+  --blue: #4d73f0;
+  --violet: #6a4fe3;
+  --shadow: 0 10px 28px rgba(64, 80, 116, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  background: linear-gradient(180deg, #f6f8fc 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.page-wrap {
+  padding: 12px 10px 24px;
+}
+
+.landing-page,
+.legal-layout {
+  width: min(100%, 374px);
+  margin: 0 auto;
+}
+
+.hero-card,
+.form-card,
+.legal-card {
+  border-radius: 26px;
+  background: var(--card);
+  border: 1px solid rgba(217, 223, 235, 0.95);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-card,
+.form-card {
+  margin-bottom: 18px;
+}
+
+.hero-top {
+  padding: 18px 24px 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+}
+
+.hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.94;
+}
+
+.hero-location__icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+}
+
+.hero-location__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-top h1,
+.form-card h2,
+.legal-card h1,
+.legal-card h2 {
+  margin: 12px 0 10px;
+  line-height: 1.14;
+}
+
+.hero-top h1 {
+  font-size: clamp(2rem, 6vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero-top p,
+.footer-note p,
+.legal-card p,
+.legal-card li,
+.form-status {
+  color: inherit;
+  line-height: 1.55;
+}
+
+.hero-top p {
+  margin: 0;
+  max-width: 286px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.feature-stack {
+  display: grid;
+  gap: 10px;
+  padding: 18px 18px 20px;
+}
+
+.feature-pill {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 64px;
+  padding: 12px 16px;
+  border-radius: 17px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.feature-pill div {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.38;
+}
+
+.feature-icon,
+.footer-note__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon {
+  width: 31px;
+  height: 31px;
+  border-radius: 11px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+}
+
+.feature-icon svg,
+.submit-icon svg,
+.footer-note__icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.form-card {
+  padding: 24px;
+}
+
+.form-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.lead-form {
+  display: grid;
+  gap: 20px;
+}
+
+.field-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-title,
+.form-label {
+  display: grid;
+  gap: 10px;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.chip-row,
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.chip-grid {
+  display: flex;
+}
+
+.choice-chip {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 13px;
+  border: 1px solid #cfd7e6;
+  background: linear-gradient(180deg, #f8fafe, #eef2f8);
+  color: #233150;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.choice-chip:hover {
+  transform: translateY(-1px);
+}
+
+.choice-chip.is-selected {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  box-shadow: 0 10px 18px rgba(93, 92, 227, 0.2);
+}
+
+.form-label input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 15px;
+  border-radius: 13px;
+  border: 1px solid #d7dfea;
+  background: #eef2f7;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.form-label input::placeholder {
+  color: #8a94ab;
+}
+
+.form-label input:focus {
+  outline: none;
+  border-color: rgba(77, 116, 242, 0.5);
+  box-shadow: 0 0 0 4px rgba(77, 116, 242, 0.08);
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  box-shadow: 0 12px 24px rgba(93, 92, 227, 0.2);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.form-status {
+  min-height: 22px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.form-status.pending {
+  color: var(--blue);
+}
+
+.form-status.success {
+  color: #1d8d5d;
+}
+
+.form-status.error {
+  color: #cf4a4a;
+}
+
+.page-footer {
+  display: grid;
+  gap: 14px;
+  padding: 2px 8px 0;
+  color: var(--muted);
+}
+
+.footer-note {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.footer-note__icon {
+  color: #79849c;
+}
+
+.footer-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  max-width: 130px;
+  text-align: center;
+}
+
+.legal-layout {
+  padding: 18px 10px 28px;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.legal-card {
+  padding: 22px 20px;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+}
+
+.legal-card ul {
+  padding-left: 20px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 420px) {
+  .landing-page,
+  .legal-layout {
+    width: 100%;
+  }
+
+  .form-card,
+  .hero-top {
+    padding-inline: 18px;
+  }
+
+  .hero-top p {
+    max-width: none;
+  }
+
+  .feature-stack {
+    padding: 16px;
+  }
+}
+
